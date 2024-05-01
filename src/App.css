@@ -51,4 +51,14 @@ body{
   height: 90%;
   justify-content: center;
   align-items: center;
+  overflow: scroll;
+}
+.cards{
+  background-color: rgb(71, 71, 71);
+  width: 550px;
+  
+  margin-left: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }

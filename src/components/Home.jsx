@@ -1,8 +1,11 @@
 
+import List from './List.jsx'
 
 function Home() {
+
+
   return (
-    <div id="home-main">CONTENEDOR HOME</div>
+    <List />
   )
 }
 
