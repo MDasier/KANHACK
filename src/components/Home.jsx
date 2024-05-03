@@ -1,11 +1,12 @@
 
-import List from './List.jsx'
+
+import WorkSpaces from './WorkSpaces.jsx'
 
 function Home() {
 
 
   return (
-      <List />    
+    <List />
   )
 }
 

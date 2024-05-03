@@ -21,9 +21,9 @@ function List() {
       {listaTodo.map((eachItem,index) => {
       return (        
         <div key={eachItem.id} >          
-          <div className='cards'>            
+          <div >            
             
-            <div>
+            <div className='cards'>
               <ListItem eachItem={eachItem} />
               <button onClick={() => borrarToDo(index)}>Borrar</button>
             </div>
