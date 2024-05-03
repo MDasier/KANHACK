@@ -1,7 +1,7 @@
 [
     {
       "id": "1",
-      "title": "PROYECTO 1",
+      "title": "TAREA 1",
       "description": "Create a visually appealing landing page for the website.",
       "assignee": "Mary Davis",
       "status": "To Do",
@@ -11,7 +11,7 @@
     },
     {
       "id": "2",
-      "title": "PROYECTO 2",
+      "title": "TAREA 2",
       "description": "Implement user registration functionality with email verification.",
       "assignee": "Jane Smith",
       "status": "In Progress",
@@ -21,7 +21,7 @@
     },
     {
       "id": "3",
-      "title": "PROYECTO 3",
+      "title": "TAREA 3",
       "description": "Investigate and fix the login problem reported by users.",
       "assignee": "Mark Johnson",
       "status": "In Progress",

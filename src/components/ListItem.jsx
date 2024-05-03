@@ -1,36 +1,58 @@
-import { Link, useSearchParams } from "react-router-dom"
+import { Link, useSearchParams } from "react-router-dom";
 
 function ListItem(props) {
-    const {id, title, description, assignee, status, priority, createdDate, dueDate} = props.eachItem
-   
+  const {
+    id,
+    title,
+    description,
+    assignee,
+    status,
+    priority,
+    createdDate,
+    dueDate,
+  } = props.eachItem;
 
-    const[searchParams, setSearchParams] = useSearchParams()
-    const urlId = searchParams.get("id")
-    const moreDetails= () => {setSearchParams(id)}
+  const [searchParams, setSearchParams] = useSearchParams();
+  const urlId = searchParams.get("id");
+  const moreDetails = () => {
+    setSearchParams(id);
+  };
+  const borrarToDo = (index) => {
+    const copiaLista = JSON.parse(JSON.stringify(props.lista));
 
+    copiaLista.splice(index, 1);
+    props.setLista(copiaLista);
+  };
 
   return (
-                   
-            <div key={id} >          
-                    <div className='cards' style={{backgroundColor:status==="Done"?"green":status==="To Do"?"red":"orange"}}>
-                        <>
-                            
-                            <p>{title}</p>
-                            <p>{description}</p>
-                            
-                           <p>{status}</p>
+    <div key={id}>
+      <div
+        className="cards"
+        style={{
+          backgroundColor:
+            status === "Done" ? "green" : status === "To Do" ? "red" : "orange",
+        }}
+      >
+        <>
+          <p>{title}</p>
+          <p>{status}</p>
+          <p>{priority}</p>
+          <p>{dueDate}</p>
+          
+          <Link to={`/listItem/${id}`}>
+            <button
+              onClick={() => {
+                moreDetails;
+              }}>
+              More info
+            </button>
+          </Link>
 
-                            <p>{priority}</p>
-                            
-                            <p>{dueDate}</p>
-                            <Link to={`/listItem/${id}`}><button onClick={()=>{moreDetails}}>More info</button></Link>
-                        </>
-                        
-                    </div>
-            </div>
-            
-  )
+          <button onClick={() => borrarToDo(props.index)}>Borrar</button>
+        </>
+      </div>
+    </div>
+  );
 }
 
-export default ListItem
-
+export default ListItem;

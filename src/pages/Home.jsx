@@ -7,7 +7,7 @@ function Home(props) {
   return (
     //*AQUI DEBERIA MOSTRAR LA LISTA DE LISTAS (los proyectos en los que estamos trabajando)
     <div id="contenedor">
-      <Proyectos lista={props.lista} setLista={props.setLista}/>
+      <Proyectos searchValue={props.searchValue} setSearchValue={props.setSearchValue} lista={props.lista} setLista={props.setLista}/>
     </div>
   )
 }

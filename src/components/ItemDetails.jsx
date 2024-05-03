@@ -1,28 +1,23 @@
 import { useParams } from "react-router-dom"
-import toDoList from '../data/listacopia.json'
-import { Link } from "react-router-dom"
 import { useState } from "react"
+import { Link } from "react-router-dom"
 
-
-function ItemDetails() {
+function ItemDetails(props) {
   const parametrosDinamicos = useParams()
-  //const [listaTodo , setlistaTodo ] = useState(toDoList)//cargar la lista para poder actualizarla
+  
 
-  const itemEncontrado = toDoList.find((item)=> {
+  const itemEncontrado = props.lista.find((item)=> {
     return item.id === parametrosDinamicos.itemId
-})
+  })
   const [estado,setEstado]=useState(itemEncontrado.status)
 
   const handleStatus = (event) => {
     setEstado(event.target.value)
-    //setlistaTodo(listaTodo)//actualizar la lista
-  }
-    
-    
+  }    
 
   return (
-    
-    <div id="contenedor">
+  
+  <div id="contenedor">
       {itemEncontrado===undefined? <h2>item no encontrado</h2>: (
         <div className='cards' style={{backgroundColor:estado==="Done"?"green":estado==="To Do"?"red":"orange"}}>
             <h2>{itemEncontrado.id}</h2>
@@ -41,7 +36,7 @@ function ItemDetails() {
             <h2>{itemEncontrado.priority}</h2>
             <h2>{itemEncontrado.createdDate}</h2>
             <h2>{itemEncontrado.dueDate}</h2>
-            <Link to={"/"}><button>Atras Satanas</button></Link>
+            <Link to={"/"}><button>Atrás</button></Link>
         </div>
     
     ) }</div>

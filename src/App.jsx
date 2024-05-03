@@ -16,21 +16,27 @@ import listadoProyectos from './data/listacopia.json'
 
 function App() {
   const [ lista , setLista ] = useState(listadoProyectos)//carga la lista inicial que es la que pasamos a los componentes
+  const [searchValue,setSearchValue] = useState("")
 
   return (
     <>
-  
-    <NavBar />
     <Footer />
-    {/*<SideBar />  */}
+    <SideBar />
+    <NavBar searchValue={searchValue} setSearchValue={setSearchValue}/>
+    
+    
     <Routes >
-      <Route path='/' element={<Home lista={lista} setLista={setLista}/>} />
-      
-      <Route path='/about' element={<About />}/>
-      <Route path='/listItem/:itemId' element={<ItemDetails/>}/>
-      <Route path='/form' element={<CreateTask lista={lista} setLista={setLista}/>}/>
+      <Route path='/' 
+      element={<Home searchValue={searchValue} setSearchValue={setSearchValue} lista={lista} setLista={setLista}/>} />      
+      <Route path='/about' 
+      element={<About />}/>
+      <Route path='/listItem/:itemId' 
+      element={<ItemDetails lista={lista} setLista={setLista}/>}/>
+      <Route path='/form' 
+      element={<CreateTask lista={lista} setLista={setLista}/>}/>
 
-      <Route path='*' element={<NotFound/>}/>
+      <Route path='*' 
+      element={<NotFound/>}/>
 
     </Routes >
       
