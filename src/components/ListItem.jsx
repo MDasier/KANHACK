@@ -1,28 +1,13 @@
 import { Link, useSearchParams } from "react-router-dom"
-import toDoList from '../data/kanban.json'
-
-
 
 function ListItem(props) {
-    console.log(props)
     const {id, title, description, assignee, status, priority, createdDate, dueDate} = props.eachItem
+   
 
     const[searchParams, setSearchParams] = useSearchParams()
     const urlId = searchParams.get("id")
     const moreDetails= () => {setSearchParams(id)}
 
-    
-
-    const [listaTodo , setlistaTodo ] = useState(toDoList)
-    
-
-
-    const borrarToDo=(id)=>{
-      const copiaLista = JSON.parse( JSON.stringify( listaTodo ) )
-  
-      copiaLista.splice(index, 1)
-      setlistaTodo(copiaLista)
-    }
 
   return (
                    
@@ -33,7 +18,8 @@ function ListItem(props) {
                             <p>{title}</p>
                             <p>{description}</p>
                             
-                            <p>{status}</p>
+                           <p>{status}</p>
+
                             <p>{priority}</p>
                             
                             <p>{dueDate}</p>
