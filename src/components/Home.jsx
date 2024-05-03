@@ -5,7 +5,7 @@ function Home() {
 
 
   return (
-    <List />
+      <List />    
   )
 }
 
