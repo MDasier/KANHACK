@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import logo from '../assets/images/logo.png'
+import logo from '../assets/images/image_360-removebg-preview.png'
 import lupa from '../assets/images/lens.svg'
 function NavBar(props) {
   const handleSearch = (event) => {
@@ -9,7 +9,7 @@ function NavBar(props) {
   return (
     <div id="nav-main">
       <Link to={"/"}>
-          <img style={{height:"55px"}} src={logo} alt="logo" />      
+          <img style={{height:"80px"}} src={logo} alt="logo" />      
       </Link>
         <div className='nav'>
           <input type="text" placeholder='buscar' value={props.searchValue} onChange={handleSearch}></input>

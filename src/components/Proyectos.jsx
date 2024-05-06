@@ -5,7 +5,8 @@ function Proyectos(props) {
 
   return (
     <div id="home-main">
-      <div className="col1">PROYECTO 1
+      <div className="col1">
+        <h4>PROYECTO 1</h4>
       {props.lista
       .filter((eachItem)=>{
         console.log(eachItem)
@@ -21,7 +22,7 @@ function Proyectos(props) {
         );
       })}
       </div>
-      <div className="col2">PROYECTO 2
+      <div className="col2"><h4>PROYECTO 2</h4>
       {props.lista
       .filter((eachItem)=>{
         console.log(eachItem)
@@ -37,7 +38,7 @@ function Proyectos(props) {
         );
       })}
       </div>
-      <div className="col3">PROYECTO 3
+      <div className="col3"><h4>PROYECTO 3</h4>
       {props.lista
       .filter((eachItem)=>{
         console.log(eachItem)
