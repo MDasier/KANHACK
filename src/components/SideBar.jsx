@@ -6,7 +6,9 @@ function SideBar() {
       <Link to={"/form"}>
         <section>AÑADIR TAREA</section>
       </Link>
-      <section>FUNCION 2</section>
+      <Link to={"/about"}>
+      <section>About</section>
+      </Link>
       <section>FUNCION 3</section>
     </div>
   );

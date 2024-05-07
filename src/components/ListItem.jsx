@@ -30,7 +30,7 @@ function ListItem(props) {
         className="cards"
         style={{
           backgroundColor:
-            status === "Done" ? "green" : status === "To Do" ? "red" : "orange",
+            status === "Done" ? "#EAFFE6" : status === "To Do" ? "#FFB3B3" : "#FFE7B3",
         }}
       >
         <>

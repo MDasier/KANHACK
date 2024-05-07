@@ -20,7 +20,6 @@ function App() {
 
   return (
     <>
-    <Footer />
     <SideBar />
     <NavBar searchValue={searchValue} setSearchValue={setSearchValue}/>
     
@@ -39,6 +38,7 @@ function App() {
       element={<NotFound/>}/>
 
     </Routes >
+    <Footer />
       
     </>
   )
