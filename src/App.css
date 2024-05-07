@@ -1,0 +1,161 @@
+body{
+  color:black;
+  scrollbar-color: rgb(0, 0, 0) rgb(129, 129, 129);
+  scrollbar-width: thin;
+  margin: 0px;
+  overflow: hidden;
+  
+}
+
+a {
+  font-weight: 500;
+  color: black;
+  text-decoration: none;
+}
+a:hover {
+  cursor: pointer;
+}
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
+
+#nav-main{
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color:  rgb(49, 49, 49);
+  top: 0px;
+  border-bottom: solid #FF6F68 1.5px;
+}
+
+.nav{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#side-main{
+  position: absolute;
+  left:0px;
+  bottom: 0%;
+  height: 94%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  background-color: rgb(245, 75, 75);
+}
+#side-main section{
+  display:flex;
+  justify-content: center;
+  width: 140px;
+  height: 33vh;
+  text-align: center;
+  align-items: center;
+  background-color: rgb(245, 75, 75);
+  border: solid 1px #FF6F68;
+  color: rgb(0, 0, 0);
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+#side-main section:hover {
+  background-color: rgb(252, 50, 50);
+  color: rgb(255, 255, 255);
+  cursor:grab;
+}
+
+#footer-main{
+  position: absolute;
+  
+  top: 97.5%;
+  left: 0px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color:  rgb(49, 49, 49);
+  border-top: solid #FF6F68 1.5px;
+}
+
+#contenedor{
+  color: rgb(255, 255, 255);
+  font-weight: bold;
+  font-size: 1.1rem;
+  background-color: rgb(212, 209, 209);
+  padding-left: 10px;
+  display: flex;
+  justify-content:space-around;
+  align-items: center;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 90vh;
+  scrollbar-width: none;
+}
+
+
+
+#contenedor form{
+  font-size: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items:normal;
+}
+
+#home-main{
+  width: 90%;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  margin-left: 120px;
+}
+
+.cards{
+  border: solid 1px black;
+  border-radius: 5% 22% 22% 22%;
+  min-width: fit-content;
+  width: 350px;
+  text-align: center;
+  
+}
+
+.form{
+  background-color: rgb(87, 41, 41);
+  border: solid 2px;
+  border-color: rgb(0, 0, 0);
+  color: white;
+}
+
+
+.col1, .col2, .col3, .colFind{
+margin: 0;
+color:black;
+background-color: rgb(212, 209, 209);
+  padding: 10px;
+  height: 100%;
+  margin-top: 0px;
+}
+h4{
+  margin: 0%;
+  color:black;
+}
+#footer-main a{
+  color: rgb(245, 75, 75);
+}
+
+#aboutPage{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(212, 209, 209);
+  height: 100vh;
+  
+
+}
+.col1 button, .col2 button, .col3 button, .colFind button{
+  border-radius: 15%;
+  background-color: darkgrey;
+  
+}
