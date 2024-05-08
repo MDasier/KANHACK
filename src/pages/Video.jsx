@@ -3,7 +3,7 @@ import ReactPlayer from 'react-player'
 
 function Video() {
   return (
-    <div className='contenedor'><ReactPlayer src="https://youtu.be/dQw4w9WgXcQ"/></div>
+    <div className='contenedor'>patata<ReactPlayer src="https://youtu.be/dQw4w9WgXcQ"/></div>
   )
 }
 
